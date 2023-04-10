@@ -1,0 +1,62 @@
+﻿@page
+@model MyCompanion.Pages.SignInModel
+@{
+    ViewData["Title"] = "SignIn page";
+}
+
+<div>
+    <form method="post">
+        <div>
+            <label>Username</label>
+            <div>
+                <input type="text" name="username" value=""/>
+            </div>
+        </div>
+        <div>
+            <label>E-Mail</label>
+            <div>
+                <input type="text" name="email" value=""/>
+            </div>
+        </div>
+        <div>
+            <label>Password</label>
+            <div>
+                <input type="text" name="passwd" value=""/>
+            </div>
+        </div>
+        <div>
+            <label>Full Name</label>
+            <div>
+                <input type="text" name="name" value=""/>
+            </div>
+        </div>
+        <div>
+            <label>Phone</label>
+            <div>
+                <input type="text" name="passwd" value=""/>
+            </div>
+        </div>
+        <div>
+            <label>Aadhar</label>
+            <div>
+                <input type="text" name="aadhar" value=""/>
+            </div>
+        </div>
+        <div>
+            <label>City</label>
+            <div>
+                <input type="text" name="city" value=""/>
+            </div>
+        </div>
+        <div>
+            <label>PIN</label>
+            <div>
+                <input type="text" name="pin" value=""/>
+            </div>
+        </div>
+    </form>
+    <div>
+        <a href="/Index"><button>Back</button></a>
+        <a href="/Option"><button>SignIn</button></a>
+    </div>
+</div>
