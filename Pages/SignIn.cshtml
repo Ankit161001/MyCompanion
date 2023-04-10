@@ -4,59 +4,82 @@
     ViewData["Title"] = "SignIn page";
 }
 
+@if (Model.errorMessage.Length > 0)
+    {
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>@Model.errorMessage</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+@if (Model.successMessage.Length > 0)
+    {
+        <div class="row mb-3">
+            <div class="col-sm-9">
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>@Model.successMessage</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    }
+
 <div>
     <form method="post">
         <div>
             <label>Username</label>
             <div>
-                <input type="text" name="username" value=""/>
+                <input type="text" name="username" value="@Model.userinfo.username"/>
             </div>
         </div>
         <div>
             <label>E-Mail</label>
             <div>
-                <input type="text" name="email" value=""/>
+                <input type="text" name="email" value="@Model.userinfo.email"/>
             </div>
         </div>
         <div>
             <label>Password</label>
             <div>
-                <input type="text" name="passwd" value=""/>
+                <input type="text" name="password" value="@Model.userinfo.password"/>
             </div>
         </div>
         <div>
             <label>Full Name</label>
             <div>
-                <input type="text" name="name" value=""/>
+                <input type="text" name="name" value="@Model.userinfo.name"/>
             </div>
         </div>
         <div>
             <label>Phone</label>
             <div>
-                <input type="text" name="passwd" value=""/>
+                <input type="text" name="phone" value="@Model.userinfo.phone"/>
             </div>
         </div>
         <div>
             <label>Aadhar</label>
             <div>
-                <input type="text" name="aadhar" value=""/>
+                <input type="text" name="aadhar" value="@Model.userinfo.aadhar"/>
             </div>
         </div>
         <div>
             <label>City</label>
             <div>
-                <input type="text" name="city" value=""/>
+                <input type="text" name="city" value="@Model.userinfo.city"/>
             </div>
         </div>
         <div>
             <label>PIN</label>
             <div>
-                <input type="text" name="pin" value=""/>
+                <input type="text" name="pin" value="@Model.userinfo.pin"/>
             </div>
         </div>
-    </form>
-    <div>
+        <div>
         <a href="/Index"><button>Back</button></a>
-        <a href="/Option"><button>SignIn</button></a>
+        @*<a href="/Option">*@
+            <button type="submit" class="btn btn-primary">Submit</button>
+        @*</a>*@
     </div>
+    </form>
+    
 </div>
