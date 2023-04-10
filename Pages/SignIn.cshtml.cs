@@ -81,7 +81,7 @@ namespace MyCompanion.Pages
 
 public class UserInfo
 {
-    public string uid;
+    public int uid;
     public string username;
     public string email;  
     public string password;
